@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Disease Prediction</title>
+
+    <style>
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#f4f4f4;
+            margin:0;
+            padding:0;
+        }
+
+        .container{
+            width:50%;
+            margin:30px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h1{
+            text-align:center;
+            color:#0d6efd;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input,select{
+            width:100%;
+            padding:10px;
+            margin:8px 0 18px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        input[type="submit"]{
+            background:#0d6efd;
+            color:white;
+            border:none;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        input[type="submit"]:hover{
+            background:#084298;
+        }
+
+        .menu{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            margin:10px;
+            color:white;
+            background:#0d6efd;
+            padding:10px 20px;
+            border-radius:5px;
+        }
+
+        .menu a:hover{
+            background:#084298;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Medical Disease Prediction</h1>
+
+<div class="menu">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+</div>
+
+<form action="/project" method="post">
+
+<label>Age</label>
+<input type="number" name="Age" required>
+
+<label>Gender</label>
+<select name="Gender">
+    <option>Male</option>
+    <option>Female</option>
+</select>
+
+<label>BMI</label>
+<input type="number" step="0.1" name="BMI" required>
+
+<label>Blood Pressure</label>
+<input type="number" name="BloodPressure" required>
+
+<label>Heart Rate</label>
+<input type="number" name="HeartRate" required>
+
+<label>Smoking</label>
+<select name="Smoking">
+    <option>Yes</option>
+    <option>No</option>
+</select>
+
+<input type="submit" value="Predict Disease">
+
+</form>
+
+</div>
+
+</body>
+</html>
